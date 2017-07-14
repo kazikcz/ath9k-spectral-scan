@@ -71,7 +71,7 @@ static void parse_ht20(void) {
 		if (data == 0)
 			data = 1;
 		signal = sample.noise + sample.rssi + 20 * log10f(data) - log10f(datasquaresum) * 10;
-		freq = sample.freq - 10 + (20*i/ARRAY_SIZE(sample.data));
+		freq = sample.freq - 10 + (20.0*i/ARRAY_SIZE(sample.data));
 		printf("center-freq %d freq %f signal %f\n", sample.freq, freq, signal);
 	}
 }
